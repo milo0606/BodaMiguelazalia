@@ -262,7 +262,7 @@
                     <span class="text-2xl w-10 flex justify-center items-center shrink-0 mr-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none" /><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M.75 14.25a9 9 0 1 0 18.001 0a9 9 0 0 0-18.001 0" /><path d="M10.123 23.237c2.425-1.479 4.127-4.946 4.127-8.987s-1.706-7.517-4.136-8.992M9.75 5.25V.75m-.373 22.487C6.952 21.758 5.25 18.291 5.25 14.25s1.707-7.519 4.138-8.993M17.25.75v3m-1.5-1.5h3m3 3v3m-1.5-1.5h3" /><path d="M.75 14.25c0 .394.233.784.685 1.148s1.115.695 1.951.973c.836.279 1.828.5 2.92.65a25 25 0 0 0 3.444.229c1.182 0 2.352-.078 3.444-.228s2.084-.372 2.92-.65c.836-.28 1.499-.61 1.95-.974c.453-.364.686-.754.686-1.148s-.233-.784-.685-1.148s-1.115-.695-1.951-.973c-.836-.279-1.828-.5-2.92-.65a25 25 0 0 0-3.444-.229a25 25 0 0 0-3.444.228c-1.092.151-2.084.372-2.92.65c-.836.28-1.499.61-1.95.974c-.453.364-.686.754-.686 1.148" /></g></svg>
                     </span>
-                    <span class="font-bold w-[100px] whitespace-nowrap text-left shrink-0 tracking-wide">10:40 p.m.</span>
+                    <span class="font-bold w-[100px] whitespace-nowrap text-left shrink-0 tracking-wide">10:00 p.m.</span>
                     <span class="opacity-70 mx-3 shrink-0">—</span>
                     <span class="text-left leading-tight">Fiesta</span>
                 </div>
@@ -272,7 +272,7 @@
                     <span class="text-2xl w-10 flex justify-center items-center shrink-0 mr-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 640 640"><path d="M0 0h640v640H0z" fill="none" /><path fill="currentColor" d="M311.6 95c-14.1-19.5-36.7-31-60.7-31c-41.4 0-74.9 33.5-74.9 74.9v2.4c0 64.4 82 133.4 122.2 163.3c13 9.7 30.5 9.7 43.5 0c40.2-30 122.2-98.9 122.2-163.3v-2.4c0-41.4-33.5-74.9-74.9-74.9c-24 0-46.6 11.5-60.7 31l-8.3 11.7zM141.3 405.5L98.7 448H64c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32h320.5c29 0 57.3-9.3 80.7-26.5l126.6-93.3c17.8-13.1 21.6-38.1 8.5-55.9s-38.1-21.6-55.9-8.5L424.6 480H312c-13.3 0-24-10.7-24-24s10.7-24 24-24h72c17.7 0 32-14.3 32-32s-14.3-32-32-32H231.8c-33.9 0-66.5 13.5-90.5 37.5" /></svg>
                     </span>
-                    <span class="font-bold w-[100px] whitespace-nowrap text-left shrink-0 tracking-wide">2:00 a.m.</span>
+                    <span class="font-bold w-[100px] whitespace-nowrap text-left shrink-0 tracking-wide">10:40 p.m.</span>
                     <span class="opacity-70 mx-3 shrink-0">—</span>
                     <span class="text-left leading-tight">Cierre de la<br>celebración</span>
                 </div>
@@ -554,9 +554,9 @@
                     let vol = 0;
                     let fade = setInterval(() => {
                         vol += 0.001;
-                        if (vol >= 0.3) {
+                        if (vol >= 0.1) {
                             clearInterval(fade);
-                            bgAudio.volume = 0.3;
+                            bgAudio.volume = 0.1;
                         } else {
                             bgAudio.volume = vol;
                         }
