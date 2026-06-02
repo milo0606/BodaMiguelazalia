@@ -491,7 +491,7 @@
 
     <!-- Elemento de Audio Oculto -->
     <audio id="bg-audio" loop preload="auto">
-        <source src="https://www.dropbox.com/scl/fi/7aep8uj2u06twgqlh4ucs/eDITED-AUDIO.mp3?rlkey=ssrzmn7gg9bw1l7ivj2ftk4v5&st=3rcopoo4&raw=1" type="audio/mpeg">
+        <source src="https://www.dropbox.com/scl/fi/h8tzdjmzmoqf0mhdurj2r/EDIT-2.mp3?rlkey=ulxz33z6hc7s29jz5dofnwb46&st=0svet4fe&raw=1" type="audio/mpeg">
     </audio>
 
     <!-- Botón Flotante de Audio -->
@@ -522,8 +522,6 @@
         const iconPause = document.getElementById('icon-pause');
         
         const bgAudio = document.getElementById('bg-audio');
-        bgAudio.volume = 0; // Inicia silenciado para el desbloqueo
-
 
         sobre.addEventListener('click', () => {
             if (sobre.classList.contains('is-open')) return;
@@ -549,18 +547,6 @@
                 setTimeout(() => {
                     viewHp.style.opacity = '1';
                     btnAudio.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
-                    
-                    // Subir volumen gradualmente (Fade In)
-                    let vol = 0;
-                    let fade = setInterval(() => {
-                        vol += 0.001;
-                        if (vol >= 0.1) {
-                            clearInterval(fade);
-                            bgAudio.volume = 0.1;
-                        } else {
-                            bgAudio.volume = vol;
-                        }
-                    }, 50);
                 }, 50);
             }, 1000);
         });
